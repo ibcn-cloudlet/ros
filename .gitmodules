@@ -1,0 +1,18 @@
+[submodule "brics_actuator"]
+	path = brics_actuator
+	url = ./brics_actuator/
+[submodule "image_common"]
+	path = image_common
+	url = ./image_common/
+[submodule "pr2_common"]
+	path = pr2_common
+	url = ./pr2_common/
+[submodule "youbot_description"]
+	path = youbot_description
+	url = ./youbot_description/
+[submodule "youbot_driver"]
+	path = youbot_driver
+	url = ./youbot_driver/
+[submodule "youbot_driver_ros_interface"]
+	path = youbot_driver_ros_interface
+	url = ./youbot_driver_ros_interface/
