@@ -38,3 +38,8 @@ $ source devel/setup.bash
 Now you should be able to run all ROS packages that are built in this environment
 
 
+## Sources
+
+Most of the ROS packages are sourced from remote git repositories as submodules. In case we provide patches, we can point these to our own forks of these repositories.
+
+Should we develop any ROS packages from source, or source any code that is not available on git, this can be added into the repository. For example the vrep plugin pakcages are sourced from VREP v3.3.0
