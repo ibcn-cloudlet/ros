@@ -16,3 +16,27 @@
 [submodule "youbot_driver_ros_interface"]
 	path = youbot_driver_ros_interface
 	url = ./youbot_driver_ros_interface/
+[submodule "geometry2"]
+	path = geometry2
+	url = https://github.com/ros/geometry2.git
+[submodule "image_pipeline"]
+	path = image_pipeline
+	url = https://github.com/ros-perception/image_pipeline.git
+[submodule "usb_cam"]
+	path = usb_cam
+	url = https://github.com/bosch-ros-pkg/usb_cam.git
+[submodule "rgbd_launch"]
+	path = rgbd_launch
+	url = https://github.com/ros-drivers/rgbd_launch.git
+[submodule "openni_camera"]
+	path = openni_camera
+	url = https://github.com/ros-drivers/openni_camera.git
+[submodule "openni_launch"]
+	path = openni_launch
+	url = https://github.com/ros-drivers/openni_launch.git
+[submodule "openni2_camera"]
+	path = openni2_camera
+	url = https://github.com/ros-drivers/openni2_camera.git
+[submodule "openni2_launch"]
+	path = openni2_launch
+	url = https://github.com/ros-drivers/openni2_launch.git
