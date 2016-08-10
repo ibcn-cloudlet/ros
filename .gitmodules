@@ -40,3 +40,12 @@
 [submodule "openni2_launch"]
 	path = openni2_launch
 	url = https://github.com/ros-drivers/openni2_launch.git
+[submodule "urg_node"]
+	path = urg_node
+	url = https://github.com/ros-drivers/urg_node.git
+[submodule "urg_c"]
+	path = urg_c
+	url = https://github.com/ros-drivers/urg_c.git
+[submodule "laser_proc"]
+	path = laser_proc
+	url = https://github.com/ros-perception/laser_proc.git
