@@ -49,3 +49,6 @@
 [submodule "laser_proc"]
 	path = laser_proc
 	url = https://github.com/ros-perception/laser_proc.git
+[submodule "v_repExtRosInterface/external/v_repStubsGen"]
+	path = v_repExtRosInterface/external/v_repStubsGen
+	url = https://github.com/fferri/v_repStubsGen.git

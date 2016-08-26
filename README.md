@@ -6,6 +6,15 @@ This repository contains all additional ROS packages (besides ROS-desktop) that 
 
 Make sure ROS is installed. I have used and tested it solely with ROS Indigo. The content of this repository should come in the src directory of your catkin workspace.
 
+To build the catkin workspace catkin tools is required (for the vrep plugin): http://catkin-tools.readthedocs.io/en/latest/verbs/catkin_build.html
+
+```
+$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu `lsb_release -sc` main" > /etc/apt/sources.list.d/ros-latest.list'
+$ wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
+$ sudo apt-get update
+$ sudo apt-get install python-catkin-tools
+```
+
 First source the ROS environment variables, e.g. if you have installed ROS indigo via apt-get:
 
 ```
@@ -26,8 +35,10 @@ Now initialize and build the catkin workspace
 $ cd src
 $ catkin_init_workspace
 $ cd ..
-$ catkin_make
+$ catkin build --continue-on-failure
 ```
+
+Continue on failure is required since some (unrequired) dependency packages will not build.
 
 If you now source the setup.bash file created in the devel subdirectory this workspace is overlayed on top of your environment
 
@@ -42,7 +53,25 @@ Now you should be able to run all ROS packages that are built in this environmen
 
 Most of the ROS packages are sourced from remote git repositories as submodules. In case we provide patches, we can point these to our own forks of these repositories.
 
-Should we develop any ROS packages from source, or source any code that is not available on git, this can be added into the repository. For example the vrep plugin pakcages are sourced from VREP v3.3.0
+Should we develop any ROS packages from source, or source any code that is not available on git, this can be added into the repository. For example the vrep plugin pakcages are sourced from VREP v3.3.1
+
+## VREP plugin
+
+We use the latest VREP ROS interface to communicate with ROS from VREP scripts. The source of the plugin is found in the programming/ folder of VREP. 
+
+For the YouBot, make sure also to include the following messages in meta/messages.txt
+
+```
+brics_actuator/Poison
+brics_actuator/JointValue
+brics_actuator/JointPositions
+brics_actuator/JointVelocities
+brics_actuator/JointTorques
+```
+
+This is already set up since we included these files in our git repository.
+
+After building copy the file devel/lib/libv_repExtRosInterface.so to your vrep installation directory.
 
 ## Additional libraries
 
