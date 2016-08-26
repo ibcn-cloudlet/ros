@@ -8,10 +8,18 @@ Make sure ROS is installed. I have used and tested it solely with ROS Indigo. Th
 
 To build the catkin workspace catkin tools is required (for the vrep plugin): http://catkin-tools.readthedocs.io/en/latest/verbs/catkin_build.html
 
+Installing ROS Indigo on Ubuntu 14.04 goes like this:
+
 ```
-$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu `lsb_release -sc` main" > /etc/apt/sources.list.d/ros-latest.list'
-$ wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
+$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+$ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 0xB01FA116
 $ sudo apt-get update
+$ sudo apt-get install ros-indigo-desktop-full
+$ sudo rosdep init
+$ rosdep update
+$ echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
+$ source ~/.bashrc
+$ sudo apt-get install python-rosinstall
 $ sudo apt-get install python-catkin-tools
 ```
 
@@ -27,6 +35,9 @@ Next, create a directory for your catkin workspace and clone this repo
 $ mkdir -p /dir/of/your/choice/catkin_ws/
 $ cd /dir/of/your/choice/catkin_ws
 $ git clone https://github.ugent.be/e-p/ros.git src
+$ cd src
+$ git submodule init
+$ git submodule update
 ```
 
 Now initialize and build the catkin workspace
