@@ -89,3 +89,5 @@ After building copy the file devel/lib/libv_repExtRosInterface.so to your vrep i
 * openni_camera has to be linked against log4cxx, install the package `sudo apt-get install liblog4cxx-dev`
 
 * problems with Xtion Pro on Linux, fix by upgrading firmware of device: https://github.com/nh2/asus-xtion-fix
+
+* joy ros package requires the joystick package to be installed on Ubuntu: ` sudo apt-get install joystick`

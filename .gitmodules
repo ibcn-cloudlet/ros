@@ -52,3 +52,6 @@
 [submodule "v_repExtRosInterface/external/v_repStubsGen"]
 	path = v_repExtRosInterface/external/v_repStubsGen
 	url = https://github.com/fferri/v_repStubsGen.git
+[submodule "joystick_drivers"]
+	path = joystick_drivers
+	url = https://github.com/ros-drivers/joystick_drivers.git
